@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐓𝐀𝐃𝐀𝐒𝐇𝐈 𝐘𝐓 𝐏𝐑𝐎🔰🔒🇱🇰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a0000 25%, #330000 50%, #1a0000 75%, #000000 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Gradient */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #ff0000, transparent);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        /* Logo/Icon */
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg,0,0,255);
+            border-radius: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(255, 0, 0, 0.5); }
+            50% { transform: scale(1.1); box-shadow: 0 0 50px rgba(255, 0, 0, 0.8); }
+        }
+
+        /* Title */
+        .title {
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ffffff, #3498db, #800080);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Premium Buttons */
+        .button {
+            width: 100%;
+            max-width: 280px;
+            height: 60px;
+            background: linear-gradient(45deg, #000000, #330000, #000000);
+            border: 2px solid #ff0000;
+            border-radius: 15px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+            border-color: #800080;
+        }
+
+        .button:active {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Contact Button Special Style */
+        .contact-btn {
+            background: linear-gradient(45deg, #ffff00, #cc0000, #808080);
+            border: 2px solid #00ffff;
+            animation: contactPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes contactPulse {
+            0%, 100% { box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3); }
+            50% { box-shadow: 0 5px 30px rgba(255, 0, 0, 0.6); }
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #ff0000;
+            z-index: 10;
+        }
+
+        .footer-text {
+            animation: footerGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes footerGlow {
+            0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+            100% { text-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+        }
+
+        /* Audio Player Styling */
+        .audio-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgb(0, 0, 0, 0.5);
+            border-radius: 15px;
+            border: 1px solid #008000;
+            backdrop-filter: black (10px);
+        }
+
+        audio {
+            width: 100%;
+            max-width: 300px;
+            height: 40px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #f1C4Of;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .title { font-size: 24px; margin-bottom: 30px; }
+            .button { height: 55px; font-size: 14px; }
+            .logo { width: 60px; height: 60px; font-size: 24px; }
+        }
+
+        /* Glass Effect */
+        .glass {
+            background: rgba(ee0979);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgb(ee0979);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="glass">
+            <!-- Logo -->
+            <div class="logo">🥳
+                
+            </div>
+            
+            <!-- Title -->
+            <h1 class="title">𝐓𝐀𝐃𝐀𝐒𝐇𝐈 𝐘𝐓 𝐏𝐑𝐎🔒🔰</h1>
+            <h2 class="title"> YOUTUBE PRUNIAM APP  </h2>
+           
+            
+            
+            
+            <!-- Button Container -->
+            <div class="button-container">
+                <a href="https://wa.me/+94773742779?text=𝐓𝐀𝐃𝐀𝐒𝐇𝐈_𝐁𝐁𝐇🫩♥𝐏𝐋𝐄𝐀𝐒𝐄_𝐇𝐄𝐋𝐏_𝐌𝐄_𝐒𝐔𝐃𝐔😫" class="button contact-btn">
+                    📱𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐎𝐖𝐍𝐄𝐑
+                </a>
+                
+                <a href="https://www.mediafire.com/file/o82wwpw4nt9kdn0/%25F0%259D%2590%2593%25F0%259D%2590%2580%25F0%259D%2590%2583%25F0%259D%2590%2580%25F0%259D%2590%2592%25F0%259D%2590%2587%25F0%259D%2590%2588-%25F0%259D%2590%2598%25F0%259D%2590%2593_%25F0%259D%2590%258F%25F0%259D%2590%2591%25F0%259D%2590%258E.apk/file" class="button">
+                    📂📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐃 𝐓𝐇𝐄 𝐀𝐏𝐊 
+                </a>
+              
+                
+                <a href="" class="button">
+                    ♻️🔐 𝐎𝐓𝐇𝐄𝐑 𝐀𝐏𝐏𝐒
+                </a>
+                
+                <a href="https://whatsapp.com/channel/0029VbAzEINCHDyfr2jLxM3V" class="button"> 📢🔰  𝐖𝐇𝐀𝐓𝐒𝐀𝐏 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 01
+                    
+                    <a href="https://www.mediafire.com/file/qdnlb095a2efxms/%25F0%259D%2599%2583%25F0%259D%2599%258A%25F0%259D%2599%2592_%25F0%259D%2599%258F%25F0%259D%2599%258A_%25F0%259D%2598%25BF%25F0%259D%2599%258A%25F0%259D%2599%2592%25F0%259D%2599%2589%25F0%259D%2599%2587%25F0%259D%2599%258A%25F0%259D%2598%25BF_-.zip/file" class="button">  📂♻📥 𝐆𝐄𝐓 𝐓𝐇𝐄 𝐃𝐎𝐖𝐍𝐋𝐎𝐃 𝐕𝐈𝐃𝐄𝐎  <a/> 
+                    
+                        <a href="https://whatsapp.com/channel/0029VbAb56wFcow9VF8VdX3S/827" class="button"> 🔰🐼🇱🇰 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 02
+                <a/> 
+                  
+            </div>
+
+            <!-- Audio Player -->
+            <div class="audio-container">
+                <audio controls preload="metadata">
+                    <source src=""https://files.catbox.moe/7vehge.mp3 type=" "audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-text"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐖𝐇𝐈𝐓𝐄 𝐓𝐀𝐃𝐀𝐒𝐇𝐈 <span id="currentYear"></span>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles
+        createParticles();
+
+        // Button click effects
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = e.offsetX - 10 + 'px';
+                ripple.style.top = e.offsetY - 10 + 'px';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
